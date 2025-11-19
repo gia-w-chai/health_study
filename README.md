@@ -10,10 +10,11 @@ The focus of this project is to describe the data, visualise key patterns, and p
 The analysis is carried out in a Jupyter Notebook and covers:
 
 - descriptive statistics for selected health variables,
-- visualisations to explore distributions and relationships,
-- a simple simulation related to the case,
-- a confidence interval for a chosen parameter,
-- one hypothesis test with an interpretation in plain language.
+- visualisations to explore distributions and group differences,
+- a simple simulation based on the observed disease probability,
+- 95% confidence intervals for mean systolic blood pressure using both a normal approximation and a bootstrap method,
+- a hypothesis test comparing smokers and non-smokers, with an interpretation in plain language,
+- a small simulation study to estimate the power of the hypothesis test.
 
 All work is done in Python as part of an individual assignment in an introductory data analysis course.
 
@@ -40,7 +41,7 @@ The dataset is used solely for educational and analytical purposes within the co
 
 ## Reproducibility and environment
 
-This project uses Python 3 and common data analysis libraries.
+This project uses Python 3.13.7 and common data analysis libraries.
 
 To reproduce the analysis:
 
