@@ -14,6 +14,7 @@ class HealthAnalyzer:
         """
         self.df = df
         self.bp_age_model: LinearRegression | None = None
+        self.bp_age_weight_model: LinearRegression | None = None
 
     def basic_stats(self) -> pd.DataFrame:
         """
@@ -31,4 +32,16 @@ class HealthAnalyzer:
         model = LinearRegression()
         model.fit(X, y)
         self.bp_age_model = model
+        return model
+
+    def fit_bp_age_weight_regression(self) -> LinearRegression:
+        """
+        Fit a multiple linear regression model for systolic blood pressure
+        using both age and weight as predictors.
+        """
+        X = self.df[["age", "weight"]].values
+        y = self.df["systolic_bp"].values
+        model = LinearRegression()
+        model.fit(X, y)
+        self.bp_age_weight_model = model
         return model
